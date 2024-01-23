@@ -5,6 +5,7 @@ import RecommendedMenuCard from "@/components/modules/menu/RecommendedMenuCard";
 import ButtonUI from "@/components/common/ButtonUI";
 import { Checkbox, Chip, RadioGroup, Radio } from "@nextui-org/react";
 import {  useSelector } from "@/redux/store";
+import Link from "next/link";
 
 const CartMain = () => {
   const [totalPrice, setTotalPrice] = useState(0);
@@ -108,7 +109,11 @@ const CartMain = () => {
                   <span>Total Amount</span>
                   <span>$55.59</span>
                 </li>
-                <ButtonUI fullWidth>Continue Checkout</ButtonUI>
+                <ButtonUI fullWidth>
+                  <Link href='/checkout'> 
+                    Continue Checkout
+                  </Link>
+                </ButtonUI>
               </ul>
             </div>
           </div>
